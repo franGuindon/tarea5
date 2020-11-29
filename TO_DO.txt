@@ -1,0 +1,28 @@
+Por hacer:
+
+Investigar criterios evaluacion kmeans:
+- inertia
+- homogeneity
+- completeness
+- v measure
+- adjusted rand
+- adjusted mutual info
+- silhoutte
+
+Investigar métodos de inicialización
+ - k-means++
+ - random
+ - usando componentes de pca
+
+Crear nueva versión de base.py que usa MNIST con normalización eliminada.
+
+Visualizar centroides usando K=3,10,20
+ FALTA RESOLVER:
+	¿En cuantas dimensiones hacer k means? Codigo 1: Hacer K means en dimensiones originales
+					       Codigo 2: Hacer K means en 64
+	¿Cuáles datos usar para la PCA? Respuesta: Usar todos los datos
+
+Codigo 1:
+(datos originales en 784 dims) -> kmeans -> pca a 2 dims para visualizar 
+Codigo 2:
+(datos originales en 784 dims) -> pca a 64 dims -> kmeans -> pca a 2 dims para visualizar
