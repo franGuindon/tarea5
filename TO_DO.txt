@@ -26,3 +26,11 @@ Visualizar centroides como imágenes usando K=3,10,20 para Codigo 1 (64D) y Codi
 Mostrar centroides de 64D y 784D y datos, proyectados a 2 dims con PCA de todos datos en Codigo 1 y Codigo 2
 
 Mostrar centroides de 64D y 784D y datos, proyectados a 2 dims con PCA de solo centroides en Codigo 1 y Codigo 2
+
+-------------------
+FALTA POR RESOLVER:
+-------------------
+
+¿Cómo vamos a hacer normalización (o no hacer)?
+- posibles soluciones: investigar si Kmeans y PCA se pueden hacer sin normalizar (creo que Kmeans sí, no estoy de PCA)
+- investigar si es práctico normalizar y luego desnormalizar según corresponda
