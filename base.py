@@ -20,7 +20,7 @@ from sklearn.preprocessing import scale
 np.random.seed(42)
 
 X_digits, y_digits = load_digits(return_X_y=True)
-data = scale(X_digits)
+data = X_digits#scale(X_digits)
 
 n_samples, n_features = data.shape
 n_digits = len(np.unique(y_digits))
@@ -33,7 +33,7 @@ print("n_digits: %d, \t n_samples %d, \t n_features %d"
 
 
 print(82 * '_')
-print('init\t\ttime\tinertia\thomo\tcompl\tv-meas\tARI\tAMI\tsilhouette')
+print('init\t\ttime\tinertia\thomo\tcompl\tv-meas\tARI\t\tAMI\t\tsilhouette')
 
 
 def bench_k_means(estimator, name, data):
@@ -104,3 +104,15 @@ plt.ylim(y_min, y_max)
 plt.xticks(())
 plt.yticks(())
 plt.show()
+
+# #############################################################################
+#
+
+est = KMeans(init='k-means++', n_clusters=n_digits, n_init=10)
+est.fit(data)
+centroids = est.cluster_centers_
+img = data[0].reshape(8,8)
+img2 = centroids[3].reshape(8,8)
+fig = plt.figure
+plt.imshow(img2,cmap="gray")
+plt.show
