@@ -34,7 +34,10 @@ def write_down(estimator="",name="",data=""):
     if name == "header":
         hline()
         print("\nWelcome!\n\n"\
-              "(introduction)")
+              "This code will train several k-means models under varying conditions.\n"\
+              "Metrics for each model will be sumarized in the following tables.\n"\
+              "k-means++ initialized model centroids will be plotted as images.\n"\
+              "Data and centroids for these same models will be reduced to 2 dimensions for visualization.\n")
         hline()
         print("\nFor the sklearn digits dataset:\n\n"\
               "Number of digits: {}\n"\
